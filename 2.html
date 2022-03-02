@@ -298,27 +298,27 @@
 
                 }
             }
-            // setInterval(function () {
-            //     GetDate(false);
-            // }, 1000);
+             setInterval(function () {
+                 GetDate(false);
+             }, 1000);
 
-            // function GetDate(flag) {
-            //     AjaxGet(AjaxHandlerUrl + 'ThirdWeb/GetServerDate', null, function (result) {
-            //         $("#monthDay").html(result.monthDay);
-            //         $("#second").html(result.second);
-            //         $("#hourMinute").html(result.hourMinute);
-            //         if (flag) {
-            //             $("#marqueeStr").html(result.marqueeStr);
-            //         }
-            //     });
-            // }
+             function GetDate(flag) {
+                 AjaxGet(AjaxHandlerUrl + 'ThirdWeb/GetServerDate', null, function (result) {
+                     $("#monthDay").html(result.monthDay);
+                     $("#second").html(result.second);
+                     $("#hourMinute").html(result.hourMinute);
+                     if (flag) {
+                         $("#marqueeStr").html(result.marqueeStr);
+                     }
+                 });
+             }
             //动态获取时间
             window.setInterval(function (){
 	    		    var nowTime = getNowFormatDate();
                     $("#monthDay").html(getMonthAndDay());
                     $("#hourMinute").html(nowTime.split(" ")[1].substring(0,5));
                     $("#second").html(nowTime.split(" ")[1].substring(6,8));
-                    // $("#marqueeStr").html('文明');
+                    $("#marqueeStr").html('至诚');
 	    		},1000);
 
             function getNowFormatDate() {//获取当前时间
@@ -361,9 +361,9 @@
                 var val1 = getParam("userName");
                 var val2 = getParam("deptName");
                 var val3 = getParam("marqueeStr");
-                $("#userName").text("姓名：" + val1);
-                $("#deptName").text("部门：" + val2);
-                $("#marqueeStr").html(val3);
+               // $("#userName").text("姓名：" + val1);
+               // $("#deptName").text("部门：" + val2);
+               // $("#marqueeStr").html(val3);
             });
 
         </script>
