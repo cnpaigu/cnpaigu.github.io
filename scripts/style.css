@@ -42,7 +42,7 @@ body {
   display: block;
   width: 93%;
   margin-bottom: 20px;
-  border: 0;
+  border: none;
   padding: 10px;
   border-bottom: 1px solid rgb(187, 129, 241) ;
   font-size: 15px;
@@ -61,7 +61,7 @@ body {
   border-radius: 10px;
   background-image: linear-gradient(to right,#fbc2eb,#a6c1ee);
   color: #fff;
-  border:none;
+  border: none;
   font-size: 20px;
 }
 
