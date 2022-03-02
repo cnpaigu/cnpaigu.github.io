@@ -50,7 +50,7 @@ body {
 }
 
 .login-wrapper .form-wrapper .input-item::placeholder {
-  text-transform: uppercase;
+  text-transform:capitalize;
 }
 
 .login-wrapper .form-wrapper .btn {
@@ -74,4 +74,5 @@ body {
   text-decoration-line: none;
   color: #a6c1ee;
   font-weight: bold;
+  text-transform:capitalize
 }
