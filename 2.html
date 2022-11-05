@@ -212,17 +212,17 @@
                     text: qrcode
                 });
                 
-                //判断健康码颜色改变提示语
-                if (jkm == "#000000") {
-                    $(".jkmColor").css("color", "#1d953f");
-                    $("#slogan").html("未见异常，允许通行，请主动出示，配合检测，并做好自我防护，出行前请确认。");
-                } else if (jkm == "#d20c12") {
-                    $(".jkmColor").css("color", jkm);
-                    $("#slogan").html("此码不可通行，码颜色将根据您的健康信息和通行权限动态更新。");
-                } else {
-                    $(".jkmColor").css("color", jkm);
-                }
-            }
+            //     //判断健康码颜色改变提示语
+            //   if (jkm == "#000000") {
+            //        $(".jkmColor").css("color", "#1d953f");
+            //        $("#slogan").html("未见异常，允许通行，请主动出示，配合检测，并做好自我防护，出行前请确认。");
+            //    } else if (jkm == "#d20c12") {
+            //        $(".jkmColor").css("color", jkm);
+            //        $("#slogan").html("此码不可通行，码颜色将根据您的健康信息和通行权限动态更新。");
+            //    } else {
+            //        $(".jkmColor").css("color", jkm);
+            //    }
+          //  }
             // //获取支付码
             // function getreqestbarcode() {
             //     var i = parseInt(10*Math.random());
@@ -313,57 +313,57 @@
             //     });
             // }
             //动态获取时间
-            window.setInterval(function (){
-	    		    var nowTime = getNowFormatDate();
-                    $("#monthDay").html(getMonthAndDay());
-                    $("#hourMinute").html(nowTime.split(" ")[1].substring(0,5));
-                    $("#second").html(nowTime.split(" ")[1].substring(6,8));
-                    // $("#marqueeStr").html('文明');
-	    		},1000);
+//            window.setInterval(function (){
+//	    		    var nowTime = getNowFormatDate();
+//                   $("#monthDay").html(getMonthAndDay());
+//                    $("#hourMinute").html(nowTime.split(" ")[1].substring(0,5));
+//                    $("#second").html(nowTime.split(" ")[1].substring(6,8));
+//                    // $("#marqueeStr").html('文明');
+//	    		},1000);
 
-            function getNowFormatDate() {//获取当前时间
-                var date = new Date();
-                var seperator1 = "-";
-                var seperator2 = ":";
-                var month = date.getMonth() + 1<10? "0"+(date.getMonth() + 1):date.getMonth() + 1;
-                var strDate = date.getDate()<10? "0" + date.getDate():date.getDate();
-                var hour = date.getHours()<10?"0" + date.getHours():date.getHours();
-                var minute = date.getMinutes()<10?"0" + date.getMinutes():date.getMinutes();
-                var second = date.getSeconds()<10?"0" + date.getSeconds():date.getSeconds();
-                //var currentdate = date.getFullYear() + seperator1  + month  + seperator1  + strDate
-                var currentdate = month  + seperator1  + strDate
-                        + " "  + hour  + seperator2  + minute  + seperator2 + second
-                        ;
-                return currentdate;
-            }
-            function getMonthAndDay() {//获取当前时间
-                var date = new Date();
-                var month = date.getMonth() + 1;
-                var strDate = date.getDate();
-                var currentdate = add0(month)  + "月" + add0(strDate) +"日";
-                return currentdate;
-            }
+//            function getNowFormatDate() {//获取当前时间
+//                var date = new Date();
+//                var seperator1 = "-";
+//                var seperator2 = ":";
+//                var month = date.getMonth() + 1<10? "0"+(date.getMonth() + 1):date.getMonth() + 1;
+//                var strDate = date.getDate()<10? "0" + date.getDate():date.getDate();
+//                var hour = date.getHours()<10?"0" + date.getHours():date.getHours();
+//                var minute = date.getMinutes()<10?"0" + date.getMinutes():date.getMinutes();
+//                var second = date.getSeconds()<10?"0" + date.getSeconds():date.getSeconds();
+//                //var currentdate = date.getFullYear() + seperator1  + month  + seperator1  + strDate
+//                var currentdate = month  + seperator1  + strDate
+//                        + " "  + hour  + seperator2  + minute  + seperator2 + second
+//                        ;
+//                return currentdate;
+//            }
+//            function getMonthAndDay() {//获取当前时间
+//                var date = new Date();
+//                var month = date.getMonth() + 1;
+//                var strDate = date.getDate();
+//                var currentdate = add0(month)  + "月" + add0(strDate) +"日";
+//                return currentdate;
+//            }
+//
+//            //修改月、天的格式，保持两位数显示
+//            function add0(m){
+//                return m<10?'0'+m:m
+//            }
 
-            //修改月、天的格式，保持两位数显示
-            function add0(m){
-                return m<10?'0'+m:m
-            }
-
-            function getParam(name) {
-                var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
-                var r = window.location.search.substr(1).match(reg);
-                if (r != null)
-                    return decodeURI(r[2]);   //对参数进行decodeURI解码
-                return null;
-            }
+//            function getParam(name) {
+//                var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+//                var r = window.location.search.substr(1).match(reg);
+//                if (r != null)
+//                    return decodeURI(r[2]);   //对参数进行decodeURI解码
+//                return null;
+//            }
 
             $(function() {
                 var val1 = getParam("userName");
                 var val2 = getParam("deptName");
-                var val3 = getParam("marqueeStr");
+//               var val3 = getParam("marqueeStr");
                 $("#userName").text("姓名：" + val1);
                 $("#deptName").text("部门：" + val2);
-                $("#marqueeStr").html(val3);
+//                $("#marqueeStr").html(val3);
             });
 
         </script>
